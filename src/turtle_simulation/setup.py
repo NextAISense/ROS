@@ -5,13 +5,15 @@ package_name = 'turtle_simulation'
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=find_packages(),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         # Include the launch directory
         ('share/' + package_name + '/launch', ['launch/turtle_gz.launch.py']),
+        ('share/' + package_name + '/models/turtlebot', ['models/turtlebot/model.sdf']),
+        ('share/' + package_name + '/models/turtlebot', ['models/turtlebot/model.config']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

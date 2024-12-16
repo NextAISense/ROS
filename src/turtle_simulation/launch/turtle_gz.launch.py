@@ -8,7 +8,7 @@ def generate_launch_description():
 
     # Path to the turtle model (update this with your actual model location)
     model_file = PathJoinSubstitution([FindPackageShare('turtle_simulation'), 'models/turtlebot/model.sdf'])
-
+    print("MODEL_FILE:", model_file.__dict__)
     return LaunchDescription([
         # Start the Gazebo simulator with the default world file
         # ExecuteProcess(
@@ -18,7 +18,7 @@ def generate_launch_description():
         
         # Spawn the turtle model into the Gazebo world
         ExecuteProcess(
-            cmd=['gz', 'sim', '--verbose', model_file],
+            cmd=['gz', 'sim', model_file],
             output='screen'
         ),
         

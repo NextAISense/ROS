@@ -1,0 +1,23 @@
+[1.326s] Invoking command in '/home/anurag/NextAISense/ROS/src/turtle_simulation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/anurag/NextAISense/ROS/build/turtle_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_simulation build --build-base /home/anurag/NextAISense/ROS/build/turtle_simulation/build install --record /home/anurag/NextAISense/ROS/build/turtle_simulation/install.log --single-version-externally-managed install_data
+[1.760s] running egg_info
+[1.794s] writing ../../build/turtle_simulation/turtle_simulation.egg-info/PKG-INFO
+[1.794s] writing dependency_links to ../../build/turtle_simulation/turtle_simulation.egg-info/dependency_links.txt
+[1.795s] writing entry points to ../../build/turtle_simulation/turtle_simulation.egg-info/entry_points.txt
+[1.795s] writing requirements to ../../build/turtle_simulation/turtle_simulation.egg-info/requires.txt
+[1.795s] writing top-level names to ../../build/turtle_simulation/turtle_simulation.egg-info/top_level.txt
+[1.865s] reading manifest file '../../build/turtle_simulation/turtle_simulation.egg-info/SOURCES.txt'
+[1.866s] writing manifest file '../../build/turtle_simulation/turtle_simulation.egg-info/SOURCES.txt'
+[1.867s] running build
+[1.867s] running build_py
+[1.867s] running install
+[1.875s] running install_lib
+[1.912s] running install_data
+[1.912s] copying models/turtlebot/model.sdf -> /home/anurag/NextAISense/ROS/install/turtle_simulation/share/turtle_simulation/models/turtlebot
+[1.913s] copying models/turtlebot/model.config -> /home/anurag/NextAISense/ROS/install/turtle_simulation/share/turtle_simulation/models/turtlebot
+[1.913s] running install_egg_info
+[1.949s] removing '/home/anurag/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages/turtle_simulation-0.0.0-py3.12.egg-info' (and everything under it)
+[1.950s] Copying ../../build/turtle_simulation/turtle_simulation.egg-info to /home/anurag/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages/turtle_simulation-0.0.0-py3.12.egg-info
+[1.951s] running install_scripts
+[2.179s] Installing turtle_control script to /home/anurag/NextAISense/ROS/install/turtle_simulation/lib/turtle_simulation
+[2.180s] writing list of installed files to '/home/anurag/NextAISense/ROS/build/turtle_simulation/install.log'
+[2.231s] Invoked command in '/home/anurag/NextAISense/ROS/src/turtle_simulation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/anurag/NextAISense/ROS/build/turtle_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_simulation build --build-base /home/anurag/NextAISense/ROS/build/turtle_simulation/build install --record /home/anurag/NextAISense/ROS/build/turtle_simulation/install.log --single-version-externally-managed install_data
