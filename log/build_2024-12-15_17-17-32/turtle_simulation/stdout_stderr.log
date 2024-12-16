@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/turtle_simulation/turtle_simulation.egg-info
+writing ../../build/turtle_simulation/turtle_simulation.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtle_simulation/turtle_simulation.egg-info/dependency_links.txt
+writing requirements to ../../build/turtle_simulation/turtle_simulation.egg-info/requires.txt
+writing top-level names to ../../build/turtle_simulation/turtle_simulation.egg-info/top_level.txt
+writing manifest file '../../build/turtle_simulation/turtle_simulation.egg-info/SOURCES.txt'
+reading manifest file '../../build/turtle_simulation/turtle_simulation.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtle_simulation/turtle_simulation.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/zahid/NextAISense/ROS/build/turtle_simulation/build
+creating /home/zahid/NextAISense/ROS/build/turtle_simulation/build/lib
+creating /home/zahid/NextAISense/ROS/build/turtle_simulation/build/lib/turtle_simulation
+copying turtle_simulation/__init__.py -> /home/zahid/NextAISense/ROS/build/turtle_simulation/build/lib/turtle_simulation
+running install
+running install_lib
+creating /home/zahid/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages/turtle_simulation
+copying /home/zahid/NextAISense/ROS/build/turtle_simulation/build/lib/turtle_simulation/__init__.py -> /home/zahid/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages/turtle_simulation
+byte-compiling /home/zahid/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages/turtle_simulation/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/zahid/NextAISense/ROS/install/turtle_simulation/share/ament_index
+creating /home/zahid/NextAISense/ROS/install/turtle_simulation/share/ament_index/resource_index
+creating /home/zahid/NextAISense/ROS/install/turtle_simulation/share/ament_index/resource_index/packages
+copying resource/turtle_simulation -> /home/zahid/NextAISense/ROS/install/turtle_simulation/share/ament_index/resource_index/packages
+copying package.xml -> /home/zahid/NextAISense/ROS/install/turtle_simulation/share/turtle_simulation
+running install_egg_info
+Copying ../../build/turtle_simulation/turtle_simulation.egg-info to /home/zahid/NextAISense/ROS/install/turtle_simulation/lib/python3.12/site-packages/turtle_simulation-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/zahid/NextAISense/ROS/build/turtle_simulation/install.log'
