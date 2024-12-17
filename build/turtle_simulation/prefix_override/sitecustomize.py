@@ -1,4 +1,4 @@
 import sys
 if sys.prefix == '/usr':
     sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/anurag/NextAISense/ROS/install/turtle_simulation'
+    sys.prefix = sys.exec_prefix = '/home/zahid/NextAISense/ROS/install/turtle_simulation'
