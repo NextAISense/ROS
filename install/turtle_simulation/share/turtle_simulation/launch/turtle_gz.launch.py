@@ -29,4 +29,12 @@ def generate_launch_description():
             name='turtle_control',        # The node's name
             output='screen',              # Display node output on the screen
         ),
+        # Add the ROS-Gazebo bridge for the /cmd_vel topic
+        Node(
+            package='ros_gz_bridge', 
+            executable='parameter_bridge', 
+            name='ros_gz_bridge', 
+            arguments=['/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist'], 
+            output='screen'
+        ),
     ])

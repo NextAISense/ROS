@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
 class TurtleControl(Node):
     def __init__(self):
         super().__init__('turtle_control')
-        self.publisher = self.create_publisher(Twist, '/model/turtlebot/cmd_vel', 10)
+        self.publisher = self.create_publisher(Twist, '/cmd_vel', 10)
         self.timer = self.create_timer(0.5, self.publish_velocity)
 
     def publish_velocity(self):
