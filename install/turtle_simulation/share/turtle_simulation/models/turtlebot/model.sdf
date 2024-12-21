@@ -6,15 +6,15 @@
             <real_time_factor>1.0</real_time_factor>
         </physics>
         <plugin
-            filename="libgz-sim8-physics-system.so"
+            filename="libgz-sim-physics-system.so"
             name="gz::sim::systems::Physics">
         </plugin>
         <plugin
-            filename="libgz-sim8-user-commands-system.so"
+            filename="libgz-sim-user-commands-system.so"
             name="gz::sim::systems::UserCommands">
         </plugin>
         <plugin
-            filename="libgz-sim8-scene-broadcaster-system.so"
+            filename="libgz-sim-scene-broadcaster-system.so"
             name="gz::sim::systems::SceneBroadcaster">
         </plugin>
 
@@ -230,7 +230,7 @@
                 <child>caster</child>
             </joint>
             <plugin
-                filename="gz-sim8-diff-drive-system"
+                filename="gz-sim-diff-drive-system"
                 name="gz::sim::systems::DiffDrive">
                 <left_joint>left_wheel_joint</left_joint>
                 <right_joint>right_wheel_joint</right_joint>
