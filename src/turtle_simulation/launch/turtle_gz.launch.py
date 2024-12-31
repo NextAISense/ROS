@@ -23,12 +23,12 @@ def generate_launch_description():
         ),
         
         # Start the ROS 2 node that will control the turtle
-        Node(
-            package='turtle_simulation',  # Your ROS package
-            executable='turtle_control',  # The Python node that controls the robot
-            name='turtle_control',        # The node's name
-            output='screen',              # Display node output on the screen
-        ),
+        # Node(
+        #     package='turtle_simulation',  # Your ROS package
+        #     executable='turtle_control',  # The Python node that controls the robot
+        #     name='turtle_control',        # The node's name
+        #     output='screen',              # Display node output on the screen
+        # ),
         # Add the ROS-Gazebo bridge for the /cmd_vel topic
         Node(
             package='ros_gz_bridge', 
@@ -37,4 +37,12 @@ def generate_launch_description():
             arguments=['/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist'], 
             output='screen'
         ),
+        #Add Teleop Control Bar node
+        Node(
+            package='turtle_simulation',  # Update to your package name
+            executable='teleop_control',  # Ensure this matches the entry in `setup.py`
+            name='teleop_control',
+            output='screen',
+        ),
+
     ])

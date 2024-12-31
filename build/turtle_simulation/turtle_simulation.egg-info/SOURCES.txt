@@ -16,4 +16,5 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 turtle_simulation/__init__.py
+turtle_simulation/teleop_control.py
 turtle_simulation/turtle_control.py

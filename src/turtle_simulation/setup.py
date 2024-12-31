@@ -23,7 +23,8 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['turtle_control = turtle_simulation.turtle_control:main',
+        'console_scripts': [ #'turtle_control = turtle_simulation.turtle_control:main',
+                            'teleop_control = turtle_simulation.teleop_control:main',
         ],
     },
 )
