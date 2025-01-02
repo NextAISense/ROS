@@ -25,26 +25,7 @@
             filename="gz-sim-contact-system"
             name="gz::sim::systems::Contact">
         </plugin>
-        <!-- Moving Forward-->
-        <plugin filename="gz-sim-triggered-publisher-system"
-                name="gz::sim::systems::TriggeredPublisher">
-            <input type="gz.msgs.Int32" topic="/keyboard/keypress">
-                <match field="data">16777235</match>
-            </input>
-            <output type="gz.msgs.Twist" topic="/cmd_vel">
-                linear: {x: 0.6}, angular: {z: 0.0}
-            </output>
-        </plugin>
-        <!-- Moving Backward-->
-        <plugin filename="gz-sim-triggered-publisher-system"
-                name="gz::sim::systems::TriggeredPublisher">
-            <input type="gz.msgs.Int32" topic="/keyboard/keypress">
-                <match field="data">16777237</match>
-            </input>
-            <output type="gz.msgs.Twist" topic="/cmd_vel">
-                linear: {x: -0.6}, angular: {z: 0.0}
-            </output>
-        </plugin>
+       
         <plugin filename="gz-sim-triggered-publisher-system"
                 name="gz::sim::systems::TriggeredPublisher">
             <input type="gz.msgs.Boolean" topic="/wall/touched">
@@ -58,6 +39,28 @@
                 name="gz::sim::systems::Sensors">
             <render_engine>ogre2</render_engine>
         </plugin>
+       
+        <!-- Moving Forward-->
+        <!-- <plugin filename="gz-sim-triggered-publisher-system"
+                name="gz::sim::systems::TriggeredPublisher">
+            <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                <match field="data">16777235</match>
+            </input>
+            <output type="gz.msgs.Twist" topic="/cmd_vel">
+                linear: {x: 0.6}, angular: {z: 0.0}
+            </output>
+        </plugin> -->
+        <!-- Moving Backward-->
+        <!-- <plugin filename="gz-sim-triggered-publisher-system"
+                name="gz::sim::systems::TriggeredPublisher">
+            <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                <match field="data">16777237</match>
+            </input>
+            <output type="gz.msgs.Twist" topic="/cmd_vel">
+                linear: {x: -0.6}, angular: {z: 0.0}
+            </output>
+        </plugin> -->
+        
 
         <light type="directional" name="sun">
             <cast_shadows>true</cast_shadows>

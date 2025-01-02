@@ -8,6 +8,7 @@ def generate_launch_description():
 
     # Path to the turtle model (update this with your actual model location)
     model_file = PathJoinSubstitution([FindPackageShare('turtle_simulation'), 'models/turtlebot/model.sdf'])
+    config_file = PathJoinSubstitution([FindPackageShare('turtle_simulation'), 'models/turtlebot/CustomClient.config'])
     print("MODEL_FILE:", model_file.__dict__)
     return LaunchDescription([
         # Start the Gazebo simulator with the default world file
@@ -18,7 +19,7 @@ def generate_launch_description():
         
         # Spawn the turtle model into the Gazebo world
         ExecuteProcess(
-            cmd=['gz', 'sim', model_file],
+            cmd=['gz', 'sim', '-v', '4', model_file, '--gui-config', config_file],
             output='screen'
         ),
         
@@ -38,11 +39,18 @@ def generate_launch_description():
             output='screen'
         ),
         #Add Teleop Control Bar node
-        Node(
-            package='turtle_simulation',  # Update to your package name
-            executable='teleop_control',  # Ensure this matches the entry in `setup.py`
-            name='teleop_control',
-            output='screen',
-        ),
+        # Node(
+        #     package='turtle_simulation',  # Update to your package name
+        #     executable='teleop_control',  # Ensure this matches the entry in `setup.py`
+        #     name='teleop_control',
+        #     output='screen',
+        # ),
+        #Inbuilt GUI of the control panel
+        # Node(
+        #     package='turtle_simulation',
+        #     executable='control_panel',
+        #     name='control_panel',
+        #     output='screen',
+        # ),
 
     ])

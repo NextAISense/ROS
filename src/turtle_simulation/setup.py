@@ -14,6 +14,7 @@ setup(
         ('share/' + package_name + '/launch', ['launch/turtle_gz.launch.py']),
         ('share/' + package_name + '/models/turtlebot', ['models/turtlebot/model.sdf']),
         ('share/' + package_name + '/models/turtlebot', ['models/turtlebot/model.config']),
+        ('share/' + package_name + '/models/turtlebot', ['models/turtlebot/CustomClient.config']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -24,7 +25,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [ #'turtle_control = turtle_simulation.turtle_control:main',
-                            'teleop_control = turtle_simulation.teleop_control:main',
+                            # 'teleop_control = turtle_simulation.teleop_control:main',
+                            #'control_panel = turtle_simulation.control_panel:main',
         ],
     },
 )
