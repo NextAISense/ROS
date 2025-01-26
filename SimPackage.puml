@@ -1,0 +1,50 @@
+@startuml name
+title System High Level Architecture
+
+package "Presentation Layer" {
+  [React.js (Frontend)]
+  [Next.js (Frontend)]
+}
+
+package "Application Layer" {
+  [API Gateway]
+  [Authentication Service]
+  [Course Management Service]
+  [Simulation Controller]
+}
+
+package "Business Logic Layer" {
+  [Simulation Engine\n(ROS2 & Gazebo)]
+  [Recommendation Engine]
+  [Progress Tracker]
+}
+
+package "Data Layer" {
+  [PostgreSQL (Relational DB)]
+  [MongoDB (NoSQL DB)]
+}
+
+package "Infrastructure Layer" {
+  [Docker (Containerization)]
+  [Kubernetes (Orchestration)]
+  [AWS (Cloud Services)]
+}
+
+' Connections between layers
+[React.js (Frontend)] --> [API Gateway]
+[Next.js (Frontend)] --> [API Gateway]
+[API Gateway] --> [Authentication Service]
+[API Gateway] --> [Course Management Service]
+[API Gateway] --> [Simulation Controller]
+
+[Simulation Controller] --> [Simulation Engine\n(ROS2 & Gazebo)]
+[Course Management Service] --> [Recommendation Engine]
+[Course Management Service] --> [Progress Tracker]
+
+[Recommendation Engine] --> [PostgreSQL (Relational DB)]
+[Progress Tracker] --> [PostgreSQL (Relational DB)]
+[Simulation Engine\n(ROS2 & Gazebo)] --> [MongoDB (NoSQL DB)]
+
+[Docker (Containerization)] --> [Kubernetes (Orchestration)]
+[Kubernetes (Orchestration)] --> [AWS (Cloud Services)]
+@enduml

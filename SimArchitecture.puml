@@ -1,0 +1,41 @@
+@startuml  name
+title RoboLearn Package Architecture
+
+package "User Interface" {
+  [React.js] as React
+  [Next.js] as NextJS
+}
+
+package "Backend Services" {
+  [Node.js] as NodeJS
+  [Django] as Django
+  [REST API] as API
+}
+
+package "Simulation Engine" {
+  [ROS2] as ROS
+  [Gazebo] as Gazebo
+}
+
+package "Database Layer" {
+  [PostgreSQL] as PostgreSQL
+  [MongoDB] as MongoDB
+}
+
+package "DevOps & Infrastructure" {
+  [Docker] as Docker
+  [Kubernetes] as Kubernetes
+  [AWS] as AWS
+}
+
+React --> API: API Requests
+NextJS --> API: API Requests
+API --> Django: Business Logic
+API --> NodeJS: Microservices
+Django --> PostgreSQL: Persistent Data
+NodeJS --> MongoDB: Session/Cache
+ROS --> Gazebo: Simulation Interaction
+ROS --> NodeJS: Publish/Subscribe
+Docker --> Kubernetes: Container Management
+Kubernetes --> AWS: Cloud Hosting
+@enduml

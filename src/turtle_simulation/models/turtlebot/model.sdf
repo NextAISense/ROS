@@ -359,11 +359,11 @@
                 <pose>0.8 0 0.5 0 0 0</pose>
             </frame>
         </model>
-        <!-- <include>
+        <include>
             <uri>
-                https://fuel.gazebosim.org/1.0/OpenRobotics/models/Mine Cart Engine
+                model://~/NextAISense/ROS/src/car_bot/model/car_robot.urdf
             </uri>
-        </include> -->
+        </include>
 
         
     </world>

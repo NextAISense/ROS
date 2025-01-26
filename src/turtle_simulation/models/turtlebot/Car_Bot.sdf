@@ -1,0 +1,260 @@
+<sdf version='1.11'>
+  <model name='Car_Bot'>
+    <link name='CAR_BODY'>
+      <inertial>
+        <pose>-6.9388999999999993e-18 0.012359 1.3957e-18 0 0 0</pose>
+        <mass>0.066610000000000003</mass>
+        <inertia>
+          <ixx>1.2286000000000001e-05</ixx>
+          <ixy>-2.3375000000000001e-21</ixy>
+          <ixz>4.7983999999999998e-22</ixz>
+          <iyy>3.2577999999999999e-05</iyy>
+          <iyz>-9.3690000000000005e-22</iyz>
+          <izz>2.8742e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='CAR_BODY_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/CAR_BODY.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='CAR_BODY_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/CAR_BODY.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990199983 1 1 1</diffuse>
+          <ambient>0.990199983 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint1' type='revolute'>
+      <pose relative_to='CAR_BODY'>0 0 0 0 0 0</pose>
+      <parent>CAR_BODY</parent>
+      <child>wheel1</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel1'>
+      <pose relative_to='joint1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.028000000000000001 8.0569000000000004e-19 -0.018969 0 0 0</pose>
+        <mass>0.00025950000000000002</mass>
+        <inertia>
+          <ixx>4.2292999999999999e-09</ixx>
+          <ixy>-2.0356999999999998e-24</ixy>
+          <ixz>2.0730000000000001e-25</ixz>
+          <iyy>4.2292999999999999e-09</iyy>
+          <iyz>-6.1301999999999997e-25</iyz>
+          <izz>8.0995000000000008e-09</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel1_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel1_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990199983 1 1 1</diffuse>
+          <ambient>0.990199983 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint2' type='revolute'>
+      <pose relative_to='CAR_BODY'>0 0 0 0 0 0</pose>
+      <parent>CAR_BODY</parent>
+      <child>wheel2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel2'>
+      <pose relative_to='joint2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.028000000000000001 8.1366999999999996e-19 -0.018969 0 0 0</pose>
+        <mass>0.00025950000000000002</mass>
+        <inertia>
+          <ixx>4.2292999999999999e-09</ixx>
+          <ixy>-7.5057e-25</ixy>
+          <ixz>4.9880999999999999e-25</ixz>
+          <iyy>4.2292999999999999e-09</iyy>
+          <iyz>8.4437999999999994e-25</iyz>
+          <izz>8.0995000000000008e-09</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel2_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel2_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990199983 1 1 1</diffuse>
+          <ambient>0.990199983 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint3' type='revolute'>
+      <pose relative_to='CAR_BODY'>0 0 0 0 0 0</pose>
+      <parent>CAR_BODY</parent>
+      <child>wheel3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel3'>
+      <pose relative_to='joint3'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.028000000000000001 -3.6480999999999999e-18 0.018969 0 0 0</pose>
+        <mass>0.00025950000000000002</mass>
+        <inertia>
+          <ixx>4.2292999999999999e-09</ixx>
+          <ixy>-1.1469e-24</ixy>
+          <ixz>1.5805999999999999e-25</ixz>
+          <iyy>4.2292999999999999e-09</iyy>
+          <iyz>-7.7254000000000004e-25</iyz>
+          <izz>8.0995000000000008e-09</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel3_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel3_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel3.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990199983 1 1 1</diffuse>
+          <ambient>0.990199983 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint4' type='revolute'>
+      <pose relative_to='CAR_BODY'>0 0 0 0 0 0</pose>
+      <parent>CAR_BODY</parent>
+      <child>wheel4</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel4'>
+      <pose relative_to='joint4'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.028000000000000001 -2.7405999999999999e-18 0.018969 0 0 0</pose>
+        <mass>0.00025950000000000002</mass>
+        <inertia>
+          <ixx>4.2292999999999999e-09</ixx>
+          <ixy>-2.4119000000000001e-24</ixy>
+          <ixz>2.3968999999999999e-26</ixz>
+          <iyy>4.2292999999999999e-09</iyy>
+          <iyz>4.0847999999999998e-25</iyz>
+          <izz>8.0995000000000008e-09</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel4_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel4.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel4_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/wheel4.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990199983 1 1 1</diffuse>
+          <ambient>0.990199983 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

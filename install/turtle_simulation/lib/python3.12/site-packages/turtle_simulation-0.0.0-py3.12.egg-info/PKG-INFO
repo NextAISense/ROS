@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: turtle-simulation
-Version: 0.0.0
-Summary: Turtle simulation with ROS 2 and Gazebo.
-Maintainer: zahid
-Maintainer-email: zahid@nextaisense.com
-License: Apache-2.0
