@@ -7,7 +7,7 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
 
     # Path to the turtle model (update this with your actual model location)
-    model_file = PathJoinSubstitution([FindPackageShare('turtle_simulation'), 'models/turtlebot/Car_Bot.urdf'])
+    model_file = PathJoinSubstitution([FindPackageShare('turtle_simulation'), 'models/turtlebot/model.sdf'])
     config_file = PathJoinSubstitution([FindPackageShare('turtle_simulation'), 'models/turtlebot/CustomClient.config'])
     print("MODEL_FILE:", model_file.__dict__)
     return LaunchDescription([
